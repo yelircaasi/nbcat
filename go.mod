@@ -2,7 +2,10 @@ module github.com/yelircaasi/nbcat
 
 go 1.20
 
-require github.com/spf13/cobra v1.7.0
+require (
+	github.com/sa-/slicefunk v0.1.4
+	github.com/spf13/cobra v1.7.0
+)
 
 require (
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
