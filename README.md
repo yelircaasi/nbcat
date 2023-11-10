@@ -1,7 +1,13 @@
 # nbcat-go
 
 CLI tool to display the contents of a Jupyter notebook (.ipynb), similar to 
-`glow`, but for Jupyter notebooks (and admittedly much less fancy).
+`cat` and `glow`, but for Jupyter notebooks (and admittedly much less fancy).
+
+## Usage
+
+```sh
+nbcat my_notebook.ipynb
+```
 
 ## Roadmap
 
