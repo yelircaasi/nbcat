@@ -17,12 +17,12 @@ var rootCmd = &cobra.Command{
 'nbcat' is a command that displays a formatted version of the Jupyter
 notebook specified. It is similar to the 'cat', 'bat', and 'glow' commands, but for 
 a use case that none of them covers.`,
-
+	Args: cobra.ExactArgs(1),
 	Run: func(command *cobra.Command, args []string) {
 		// var cell = FrameStrings({"testing here"}, 60)
 		// fmt.Println(cell)
 
-		var notebook = ParseNotebookFile("_scratch/demo.ipynb")
+		var notebook = ParseNotebookFile(args[0])
 
 		var width = 100
 		var representation = StringifyRawNotebook(notebook, width)

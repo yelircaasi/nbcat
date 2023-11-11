@@ -9,13 +9,6 @@ import (
 	sf "github.com/sa-/slicefunk"
 )
 
-const horizontal = "─"
-const vertical = "│"
-const topLeft = "┌"
-const topRight = "┐"
-const bottomLeft = "└"
-const bottomRight = "┘"
-
 func min(a, b int) int {
 	if a < b {
 		return a
