@@ -30,7 +30,8 @@
         # vendorHash is required for reproducible builds.
         # If you don't know it, leave it as pkgs.lib.fakeHash,
         # run the build, and Nix will tell you the correct hash.
-        vendorHash = "sha256-bIa0NekmlPSuuVOozSYLgs1fvsACT6IDirlvbrlItZ4=";
+        # vendorHash = pkgs.lib.fakeHash;
+        vendorHash = "sha256-wxfkEg8SfVHIj5xaEJnqaxXJg6l1/mIqniSLw4pPpIw=";
 
         meta = with pkgs.lib; {
           description = "CLI tool to display the contents of a Jupyter notebook.";

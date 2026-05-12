@@ -1,6 +1,3 @@
-/*
-Copyright © 2023 Isaac Riley <isaac.r.riley@gmail.com>
-*/
 package cmd
 
 import (
@@ -9,21 +6,15 @@ import (
 	sf "github.com/sa-/slicefunk"
 )
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
 func MakeCodeLine(codeStr string, lineLength int) string {
+	textLength := lineLength - 4
 
-	var textLength int = lineLength - 4
-	codeStr = strings.Trim(codeStr[0:min(len(codeStr), textLength)], "\n")
-	var interior = codeStr + strings.Repeat(" ", textLength-len(codeStr))
-	var line = vertical + " " + interior + " " + vertical
+	trimmedRaw := strings.Trim(codeStr[0:min(len(codeStr), textLength)], "\n")
+	padding := strings.Repeat(" ", textLength-len(trimmedRaw))
 
-	return line
+	highlighted := HighlightSource(trimmedRaw)
+
+	return vertical + " " + highlighted + padding + " " + vertical
 }
 
 func FrameStrings(codeStrings []string, lineLength int) string {
